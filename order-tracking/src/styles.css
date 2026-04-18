@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+nav {
+  background-color: #1a73e8;
+  padding: 14px 32px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+nav .brand {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.page {
+  padding: 40px 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}

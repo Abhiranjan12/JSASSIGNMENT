@@ -1,0 +1,34 @@
+<div class="page">
+  <div class="page-header">
+    <h2>All Orders</h2>
+    <span class="order-count">{{ orders.length }} orders</span>
+  </div>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (order of orders; track order.id) {
+          <tr>
+            <td class="order-id">{{ order.id }}</td>
+            <td class="order-item">{{ order.item }}</td>
+            <td class="order-price">{{ order.price | currency }}</td>
+            <td class="order-date">{{ order.date | date:'mediumDate' }}</td>
+            <td>
+              <span class="badge badge-{{ order.status }}">
+                {{ order.status | orderStatus }}
+              </span>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
